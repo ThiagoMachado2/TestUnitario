@@ -27,14 +27,16 @@ class AppTest {
 
     @Test
     void CriacaoProdutoComPrecoNegativo() {
-        Produto produto = new Produto("Notebook", -2500.00, 10);
-        assertNotEquals(produto.getPreco() < 0, produto.getPreco());
+        assertThrows(IllegalArgumentException.class, () -> {
+            new Produto("Notebook", -2500.00, 10);
+        });
     }
 
     @Test
     void CriacaoProdutoComEstoqueNegativo() {
-        Produto produto = new Produto("Notebook", 2500.00, -5);
-        assertNotEquals( produto.getEstoque() < 0, produto.getEstoque());
+        assertThrows(IllegalArgumentException.class, () -> {
+            new Produto("Notebook", 2500.00, -5);
+        });
     }
 
     @Test
@@ -78,7 +80,7 @@ class AppTest {
     @Test
     void VendaQuantidadeMaiorQueEstoque() {
         Venda venda = new Venda(produto, 15);
-        assertFalse(venda.realizarVenda());
+        assertThrows(IllegalStateException.class, () -> {venda.realizarVenda();});
     }
 
     @Test
@@ -106,24 +108,30 @@ class AppTest {
     @Test
     void CriacaoEVendaProdutoNaoExistente() {
         Produto produto = null;
-        Venda venda = new Venda(null, 5);
-        assertNull(venda.realizarVenda());
+        assertThrows(NullPointerException.class, () -> {
+            Venda venda = new Venda(produto, 5);
+            venda.realizarVenda();
+        });
     }
+
 
     @Test
     void CriacaoEVendaComQuantidadeNegativa() {
-        Produto produto = new Produto("Notebook", 2500.00, -5);
-        Venda venda = new Venda(produto, -5);
-        assertEquals(-5, venda.getQuantidadeVendida());
+        Produto produto = new Produto("Notebook", 2500.00, 5);
+        assertThrows(IllegalArgumentException.class, () -> {
+            Venda venda = new Venda(produto, -5);
+            venda.realizarVenda();
+        });
     }
 
     @Test
     void AlteracaoEstoqueAposVendaComEstoqueInsuficiente() {
         Produto produto = new Produto("Notebook", 2500.00, 0);
         Venda venda = new Venda(produto, 5);
-        assertFalse(venda.realizarVenda());
+        assertThrows(IllegalStateException.class, () -> {venda.realizarVenda();});
         assertEquals(0, produto.getEstoque());
     }
+
 
     @Test
     void CriacaoVariosProdutosERealizarVendasComEstoqueCompartilhado() {
@@ -151,8 +159,9 @@ class AppTest {
     void ComportamentoVendaQuandoEstoqueInicialEhZero() {
         Produto produto = new Produto("Notebook", 2500.00, 0);
         Venda venda = new Venda(produto, 1);
-        assertFalse(venda.realizarVenda());
+        assertThrows(IllegalStateException.class, () -> {venda.realizarVenda();});
     }
+
 
     @Test
     void AumentoEstoqueAposReposicaoEVendaBemSucedida() {

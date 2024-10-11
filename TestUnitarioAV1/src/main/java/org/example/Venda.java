@@ -11,12 +11,18 @@ public class Venda {
     }
 
     public boolean realizarVenda() {
-        if (produto.diminuirEstoque(quantidadeVendida)) {
-            totalVenda = produto.getPreco() * quantidadeVendida;
-            return true;
+        if (this.quantidadeVendida < 0) {
+            throw new IllegalArgumentException("A quantidade vendida não pode ser negativa");
         }
-        return false;
+
+        if (!this.produto.diminuirEstoque(this.quantidadeVendida)) {
+            throw new IllegalStateException("Estoque insuficiente para realizar a venda");
+        }
+
+        this.totalVenda = this.produto.getPreco() * (double)this.quantidadeVendida;
+        return true;
     }
+
 
     public double getTotalVenda() {
         return totalVenda;

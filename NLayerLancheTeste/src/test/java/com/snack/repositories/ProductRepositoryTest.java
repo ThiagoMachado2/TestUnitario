@@ -15,8 +15,8 @@ public class ProductRepositoryTest {
     @BeforeEach
     public void setUp() {
         productRepository = new ProductRepository();
-        product1 = new Product(1, "Hotdog", 5.00f, "BancoDeImagem/HotDog.jpg");
-        product2 = new Product(2, "Hamburger", 10.00f, "BancoDeImagem/Hamburguer.jpg");
+        product1 = new Product(1, "Hotdog", 5.00f, "HotDog.jpg");
+        product2 = new Product(2, "Hamburguer", 10.00f, "Hamburguer.jpg");
         productRepository.append(product1);
     }
 
@@ -46,9 +46,9 @@ public class ProductRepositoryTest {
 
     @Test
     public void testarAtualizarProdutoCorretamente() {
-        product1.setDescription("Updated Hotdog");
+        product1.setDescription("Hotdog + Batata Palha");
         productRepository.update(1, product1);
-        assertEquals("Updated Hotdog", productRepository.getById(1).getDescription());
+        assertEquals("Hotdog + Batata Palha", productRepository.getById(1).getDescription());
     }
 
     @Test
@@ -65,13 +65,13 @@ public class ProductRepositoryTest {
 
     @Test
     public void testarAtualizarProdutoInexistente() {
-        Product product = new Product(99, "NaoExiste", 10.0f, "BancoDeImagem/naoexiste.jpg");
+        Product product = new Product(99, "NaoExiste", 10.0f, "naoexiste.jpg");
         assertThrows(NoSuchElementException.class, () -> productRepository.update(99, product));
     }
 
     @Test
     public void testarAdicionarProdutoComIdDuplicado() {
-        productRepository.append(new Product(1, "Duplicado", 4.00f, "BancoDeImagem/duplicado.jpg"));
+        productRepository.append(new Product(1, "Duplicado", 4.00f, "duplicado.jpg"));
         assertEquals(2, productRepository.getAll().size());
     }
 

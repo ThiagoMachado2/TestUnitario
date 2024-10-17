@@ -11,7 +11,7 @@ import java.nio.file.StandardCopyOption;
 import java.util.Arrays;
 
 public class ProductService {
-    private String filePath = "C:\\Users\\thiag\\Downloads\\NLayerLancheTeste\\bancodeimagem";
+    private String filePath = "C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\GitHub\\TestUnitario\\NLayerLancheTeste\\BancoDeImagem";
 
     private String getFileExtension(Path path) {
         String filename = path.getFileName().toString();
@@ -45,7 +45,7 @@ public class ProductService {
     public String getImagePathById(int id) {
         File directory = new File(filePath);
         File[] matches = directory.listFiles((dir, name) -> name.startsWith(String.valueOf(id)));
-        return Arrays.stream(matches).findFirst().get().getAbsolutePath();
+        return Arrays.stream(matches).findFirst().map(File::getAbsolutePath).orElse(null);
     }
 
     public void update(Product product) {
@@ -54,14 +54,17 @@ public class ProductService {
     }
 
     public void remove(int id) {
-        Path path = Paths.get(getImagePathById(id));
-
-        try {
-            Files.deleteIfExists(path);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
+        String imagePath = getImagePathById(id);
+        if (imagePath != null) {
+            Path path = Paths.get(imagePath);
+            try {
+                Files.deleteIfExists(path);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 }
+
 
 

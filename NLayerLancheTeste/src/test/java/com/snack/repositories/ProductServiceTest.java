@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Test;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.NoSuchElementException;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -17,48 +19,79 @@ public class ProductServiceTest {
     @BeforeEach
     public void setUp() {
         productService = new ProductService();
-        product = new Product(1, "HotDog", 5.00f, "BancoDeImagem/HotDog.jpg");
+        product = new Product(1, "HotDog", 5.00f, "HotDog.jpg");
     }
 
     @Test
-    public void testarSalvarProdutoComImagemValida() {
-        boolean resultado = productService.save(product);
-        assertTrue(resultado, "Produto com imagem válida deveria ser salvo com sucesso.");
+    void testarSalvarProdutoComImagemValida() {
+        // Arrange
+        ProductService service = new ProductService();
+        Product product = new Product(1, "teste", 10.0f, "src/test/resources/validImage.jpg");
+
+        // Act
+        boolean resultado = service.save(product);
+
+        // Assert
+        assertTrue(resultado);
+        assertEquals("C:\\Users\\thiag\\Downloads\\NLayerLancheTeste\\bancodeimagem1.jpg", product.getImage());
     }
 
     @Test
-    public void testarSalvarProdutoComImagemInexistente() {
-        product.setImage("BancoDeImagem/naoexiste.jpg");
-        boolean resultado = productService.save(product);
-        assertFalse(resultado, "Produto com imagem inexistente não deveria ser salvo.");
+    void testarSalvarProdutoComImagemInexistente() {
+        // Arrange
+        ProductService service = new ProductService();
+        Product product = new Product(1, "teste", 10.0f, "naoexiste.png");
+
+        // Act
+        boolean resultado = service.save(product);
+
+        // Assert
+        assertFalse(resultado);
     }
 
     @Test
-    public void testarAtualizarProdutoExistente() {
-        productService.save(product);
-        Product produtoAtualizado = new Product(1, "Hamburguer", 10.00f, "BancoDeImagem/Hamburguer.jpg");
+    void testarAtualizarProdutoExistente() {
+        // Arrange
+        ProductService service = new ProductService();
+        Product product = new Product(1, "Hamburguer", 10.0f, "Hamburguer.jpg");
 
-        productService.update(produtoAtualizado);
+        Product updatedProduct = new Product(1, "HotDog2", 20.0f, "HotDog.jpg");
 
-        Path imagePath = Paths.get(productService.getImagePathById(1));
-        assertTrue(Files.exists(imagePath), "A imagem do produto atualizado deveria existir.");
+        // Act
+        service.update(updatedProduct);
+
+        // Assert
+        assertEquals("Produto Atualizado", updatedProduct.getDescription());
+        assertEquals(20.0f, updatedProduct.getPrice());
+        assertEquals("bancodeimagem1.jpg", updatedProduct.getImage());
+    }
+
+
+    @Test
+    void testarRemoverProdutoExistente() {
+        // Arrange
+        ProductService service = new ProductService();
+        Product product = new Product(1, "Produto Teste", 10.0f, "validImage.jpg");
+        service.save(product);
+
+        // Act
+        service.remove(1);
+
+        // Assert
+        assertThrows(NoSuchElementException.class, () -> service.getImagePathById(1));
     }
 
     @Test
-    public void testarRemoverProdutoExistente() {
-        productService.save(product);
-        productService.remove(product.getId());
+    void testarObterCaminhoDaImagemPorId() {
+        // Arrange
+        ProductService service = new ProductService();
+        Product product = new Product(1, "Produto Teste", 10.0f, "src/test/resources/validImage.jpg");
+        service.save(product);
 
-        Path imagePath = Paths.get(productService.getImagePathById(product.getId()));
-        assertFalse(Files.exists(imagePath), "A imagem do produto removido não deveria existir.");
-    }
+        // Act
+        String imagePath = service.getImagePathById(1);
 
-    @Test
-    public void testarObterCaminhoDaImagemPorId() {
-        productService.save(product);
-        String caminhoImagem = productService.getImagePathById(product.getId());
-
-        assertNotNull(caminhoImagem, "O caminho da imagem não deveria ser nulo.");
-        assertTrue(caminhoImagem.contains(String.valueOf(product.getId())), "O caminho deveria conter o ID do produto.");
+        // Assert
+        assertEquals("C:\\Users\\thiag\\Downloads\\NLayerLancheTeste\\bancodeimagem1.jpg", imagePath);
     }
 }

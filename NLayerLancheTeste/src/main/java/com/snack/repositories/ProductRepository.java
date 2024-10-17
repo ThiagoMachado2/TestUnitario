@@ -14,8 +14,7 @@ public class ProductRepository {
     }
 
     public Product getById(int id) {
-        Product product = products.stream().filter(p -> p.getId() == id).findFirst().get();
-        return product;
+        return products.stream().filter(p -> p.getId() == id).findFirst().orElse(null);
     }
 
     public boolean exists(int id) {
@@ -31,7 +30,7 @@ public class ProductRepository {
     }
 
     public void update(int id, Product product) {
-        Product productInDb = products.stream().filter(p -> p.getId() == id).findFirst().get();
+        Product productInDb = products.stream().filter(p -> p.getId() == id).findFirst().orElseThrow(() -> new IllegalArgumentException("Produto não encontrado"));
 
         productInDb.setDescription(product.getDescription());
         productInDb.setPrice(product.getPrice());

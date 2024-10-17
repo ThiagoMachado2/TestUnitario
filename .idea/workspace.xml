@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d1e4c673-cd80-4e40-b961-9fa6597c1ad8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NLayerLancheTeste/src/test/java/com/snack/repositories/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NLayerLancheTeste/src/test/java/com/snack/repositories/ProductFacedeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/bancodeimagem1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/src/main/java/com/snack/repositories/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/src/main/java/com/snack/repositories/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/src/main/java/com/snack/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/src/main/java/com/snack/services/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/src/test/java/com/snack/repositories/ProductApplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/src/test/java/com/snack/repositories/ProductApplicationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/src/test/java/com/snack/repositories/ProductRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/src/test/java/com/snack/repositories/ProductRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/src/test/java/com/snack/repositories/ProductServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/src/test/java/com/snack/repositories/ProductServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/target/classes/com/snack/repositories/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/target/classes/com/snack/repositories/ProductRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/target/classes/com/snack/services/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/target/classes/com/snack/services/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/target/test-classes/com/snack/repositories/ProductApplicationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/target/test-classes/com/snack/repositories/ProductApplicationTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/target/test-classes/com/snack/repositories/ProductRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/target/test-classes/com/snack/repositories/ProductRepositoryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/target/test-classes/com/snack/repositories/ProductServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/target/test-classes/com/snack/repositories/ProductServiceTest.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ThiagoMachado2&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ThiagoMachado2/TestUnitario.git&quot;,
+    &quot;accountId&quot;: &quot;5c90b5e2-cb5e-44e6-8b40-1a1b5eb1eee1&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2nXDnCs9YPRV20ha1U0wcigVery" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.App.executor": "Run",
+    "JUnit.AppTest.executor": "Run",
+    "JUnit.ProductApplicationTest.executor": "Run",
+    "JUnit.ProductFacedeTest.executor": "Run",
+    "JUnit.ProductFacedeTest.testarRemoveProdutoComIdValido.executor": "Run",
+    "JUnit.ProductRepositoryTest.executor": "Run",
+    "JUnit.ProductServiceTest.executor": "Run",
+    "JUnit.ProductServiceTest.testarSalvarProdutoComImagemValida.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="ProductFacedeTest.testarRemoveProdutoComIdValido" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="snack-project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.snack.repositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.snack.repositories" />
+      <option name="MAIN_CLASS_NAME" value="com.snack.repositories.ProductFacedeTest" />
+      <option name="METHOD_NAME" value="testarRemoveProdutoComIdValido" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductServiceTest.testarSalvarProdutoComImagemValida" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="snack-project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.snack.repositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.snack.repositories" />
+      <option name="MAIN_CLASS_NAME" value="com.snack.repositories.ProductServiceTest" />
+      <option name="METHOD_NAME" value="testarSalvarProdutoComImagemValida" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ProductFacedeTest.testarRemoveProdutoComIdValido" />
+        <item itemvalue="JUnit.ProductServiceTest.testarSalvarProdutoComImagemValida" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d1e4c673-cd80-4e40-b961-9fa6597c1ad8" name="Changes" comment="" />
+      <created>1729110692130</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729110692130</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/NLayerLancheTeste/src/main/java/com/snack/services/ProductService.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

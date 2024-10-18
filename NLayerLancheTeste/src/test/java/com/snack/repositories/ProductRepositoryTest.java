@@ -15,8 +15,8 @@ public class ProductRepositoryTest {
     @BeforeEach
     public void setUp() {
         productRepository = new ProductRepository();
-        product1 = new Product(1, "Hotdog", 5.00f, "HotDog.jpg");
-        product2 = new Product(2, "Hamburguer", 10.00f, "Hamburguer.jpg");
+        product1 = new Product(1, "Hotdog", 5.00f, "C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\GitHub\\TestUnitario\\NLayerLancheTeste\\src\\Produtos\\HotDog.jpg");
+        product2 = new Product(2, "Hamburguer", 10.00f, "C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\GitHub\\TestUnitario\\NLayerLancheTeste\\src\\Produtos\\Hamburguer.jpg");
         productRepository.append(product1);
     }
 
@@ -65,13 +65,13 @@ public class ProductRepositoryTest {
 
     @Test
     public void testarAtualizarProdutoInexistente() {
-        Product product = new Product(99, "NaoExiste", 10.0f, "naoexiste.jpg");
-        assertThrows(NoSuchElementException.class, () -> productRepository.update(99, product));
+        Product product = new Product(99, "NaoExiste", 10.0f, "C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\GitHub\\TestUnitario\\NLayerLancheTeste\\src\\Produtos\\naoexiste.jpg");
+        assertThrows(IllegalArgumentException.class, () -> productRepository.update(99, product));
     }
 
     @Test
     public void testarAdicionarProdutoComIdDuplicado() {
-        productRepository.append(new Product(1, "Duplicado", 4.00f, "duplicado.jpg"));
+        productRepository.append(new Product(1, "Duplicado", 4.00f, "C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\GitHub\\TestUnitario\\NLayerLancheTeste\\src\\Produtos\\HotDog.jpg"));
         assertEquals(2, productRepository.getAll().size());
     }
 

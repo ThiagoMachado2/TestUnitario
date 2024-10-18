@@ -5,18 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d1e4c673-cd80-4e40-b961-9fa6597c1ad8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NLayerLancheTeste/src/test/java/com/snack/repositories/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NLayerLancheTeste/src/test/java/com/snack/repositories/ProductFacedeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/bancodeimagem1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/src/main/java/com/snack/repositories/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/src/main/java/com/snack/repositories/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/BancoDeImagem/Hamburguer.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/src/Produtos/Hamburguer.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/BancoDeImagem/HotDog.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/src/Produtos/HotDog.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/BancoDeImagem/naoexiste.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/src/main/java/com/snack/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/src/main/java/com/snack/services/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/src/test/java/com/snack/repositories/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/src/test/java/com/snack/repositories/AppTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/src/test/java/com/snack/repositories/ProductApplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/src/test/java/com/snack/repositories/ProductApplicationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/src/test/java/com/snack/repositories/ProductFacedeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/src/test/java/com/snack/repositories/ProductFacedeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/src/test/java/com/snack/repositories/ProductRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/src/test/java/com/snack/repositories/ProductRepositoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/src/test/java/com/snack/repositories/ProductServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/src/test/java/com/snack/repositories/ProductServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/target/classes/com/snack/repositories/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/target/classes/com/snack/repositories/ProductRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/target/classes/com/snack/services/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/target/classes/com/snack/services/ProductService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/target/test-classes/com/snack/repositories/ProductApplicationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/target/test-classes/com/snack/repositories/ProductApplicationTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/target/test-classes/com/snack/repositories/ProductFacedeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/target/test-classes/com/snack/repositories/ProductFacedeTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/target/test-classes/com/snack/repositories/ProductRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/target/test-classes/com/snack/repositories/ProductRepositoryTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/target/test-classes/com/snack/repositories/ProductServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/target/test-classes/com/snack/repositories/ProductServiceTest.class" afterDir="false" />
     </list>
@@ -65,13 +66,22 @@
     "JUnit.ProductFacedeTest.testarRemoveProdutoComIdValido.executor": "Run",
     "JUnit.ProductRepositoryTest.executor": "Run",
     "JUnit.ProductServiceTest.executor": "Run",
+    "JUnit.ProductServiceTest.testarAtualizarProdutoExistente.executor": "Run",
+    "JUnit.ProductServiceTest.testarRemoverProdutoExistente.executor": "Run",
     "JUnit.ProductServiceTest.testarSalvarProdutoComImagemValida.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true"
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/thiag/Downloads/Att teste Jefte 02"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\thiag\OneDrive\Área de Trabalho\GitHub\TestUnitario\NLayerLancheTeste\src\Produtos" />
+      <recent name="C:\Users\thiag\OneDrive\Área de Trabalho\GitHub\TestUnitario\NLayerLancheTeste\src" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="ProductFacedeTest.testarRemoveProdutoComIdValido" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="snack-project" />
@@ -84,6 +94,38 @@
       <option name="PACKAGE_NAME" value="com.snack.repositories" />
       <option name="MAIN_CLASS_NAME" value="com.snack.repositories.ProductFacedeTest" />
       <option name="METHOD_NAME" value="testarRemoveProdutoComIdValido" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductServiceTest.testarAtualizarProdutoExistente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="snack-project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.snack.repositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.snack.repositories" />
+      <option name="MAIN_CLASS_NAME" value="com.snack.repositories.ProductServiceTest" />
+      <option name="METHOD_NAME" value="testarAtualizarProdutoExistente" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductServiceTest.testarRemoverProdutoExistente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="snack-project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.snack.repositories.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.snack.repositories" />
+      <option name="MAIN_CLASS_NAME" value="com.snack.repositories.ProductServiceTest" />
+      <option name="METHOD_NAME" value="testarRemoverProdutoExistente" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -107,6 +149,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ProductServiceTest.testarRemoverProdutoExistente" />
+        <item itemvalue="JUnit.ProductServiceTest.testarAtualizarProdutoExistente" />
         <item itemvalue="JUnit.ProductFacedeTest.testarRemoveProdutoComIdValido" />
         <item itemvalue="JUnit.ProductServiceTest.testarSalvarProdutoComImagemValida" />
       </list>
@@ -128,7 +172,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/NLayerLancheTeste/src/main/java/com/snack/services/ProductService.java</url>
-          <line>47</line>
+          <line>51</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

@@ -11,7 +11,7 @@ import java.nio.file.StandardCopyOption;
 import java.util.Arrays;
 
 public class ProductService {
-    private String filePath = "C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\GitHub\\TestUnitario\\NLayerLancheTeste\\BancoDeImagem";
+    private String filePath = "C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\GitHub\\TestUnitario\\NLayerLancheTeste\\src\\BancoDeImagem\\";
 
     private String getFileExtension(Path path) {
         String filename = path.getFileName().toString();
@@ -25,8 +25,11 @@ public class ProductService {
     }
 
     public boolean save(Product product) {
-        Path path = Paths.get(product.getImage());
+        if (product.getImage() == null || product.getImage().isEmpty()) {
+            return false;
+        }
 
+        Path path = Paths.get(product.getImage());
         Path destinationPath = Paths.get(String.format("%s%d.%s", filePath, product.getId(), getFileExtension(path)));
 
         if (Files.exists(path)) {
@@ -41,6 +44,7 @@ public class ProductService {
 
         return false;
     }
+
 
     public String getImagePathById(int id) {
         File directory = new File(filePath);

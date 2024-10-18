@@ -29,8 +29,8 @@ public class ProductFacedeTest {
         productApplication = new ProductApplication(productRepository, productService);
         productFacade = new ProductFacade(productApplication);
 
-        product1 = new Product(1, "Hotdog", 5.00f, "HotDog.jpg");
-        product2 = new Product(2, "Hamburger", 10.00f, "Hamburguer.jpg");
+        product1 = new Product(1, "Hotdog", 5.00f, "C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\GitHub\\TestUnitario\\NLayerLancheTeste\\src\\Produtos\\HotDog.jpg");
+        product2 = new Product(2, "Hamburger", 10.00f, "C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\GitHub\\TestUnitario\\NLayerLancheTeste\\src\\Produtos\\Hamburguer.jpg");
 
         productFacade.append(product1);
         productFacade.append(product2);
@@ -72,7 +72,7 @@ public class ProductFacedeTest {
     @Test
     void testarAppendAdicionaProdutoCorretamente() {
         // Arrange
-        Product newProduct = new Product(3, "Pizza", 15.00f, "BancoDeImagem/Pizza.jpg");
+        Product newProduct = new Product(3, "Pizza", 15.00f, "C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\GitHub\\TestUnitario\\NLayerLancheTeste\\src\\Produtos\\pizza.jpg");
 
         // Act
         productFacade.append(newProduct);

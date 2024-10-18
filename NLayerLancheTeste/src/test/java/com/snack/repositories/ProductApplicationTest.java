@@ -26,8 +26,8 @@ public class ProductApplicationTest {
         productApplication = new ProductApplication(productRepository, productService);
 
         // Cria dois produtos de exemplo
-        product1 = new Product(1, "Hotdog", 5.00f, "HotDog.jpg");
-        product2 = new Product(2, "Hamburguer", 10.00f, "Hamburguer.jpg");
+        product1 = new Product(1, "Hotdog", 5.00f, "C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\GitHub\\TestUnitario\\NLayerLancheTeste\\src\\Produtos\\HotDog.jpg");
+        product2 = new Product(2, "Hamburguer", 10.00f, "C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\GitHub\\TestUnitario\\NLayerLancheTeste\\src\\Produtos\\Hamburguer.jpg");
 
         // Adiciona os produtos ao repositório
         productRepository.append(product1);
@@ -67,7 +67,7 @@ public class ProductApplicationTest {
     @Test
     void testarAdicionarProduto() {
         // Arrange
-        Product novoProduto = new Product(3, "Pizza", 15.00f, "Pizza.jpg");
+        Product novoProduto = new Product(3, "Pizza", 15.00f, "C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\GitHub\\TestUnitario\\NLayerLancheTeste\\src\\Produtos\\Hamburguer.jpg");
 
         // Act
         productApplication.append(novoProduto);
@@ -92,26 +92,26 @@ public class ProductApplicationTest {
     @Test
     void testarRemoverProdutoInexistente() {
         // Act
-        productApplication.remove(99);  // Tenta remover um ID que não existe
+        productApplication.remove(99);
         List<Product> produtos = productApplication.getAll();
 
         // Assert
-        assertEquals(2, produtos.size());  // Verifica se a remoção não afetou o estado
+        assertEquals(2, produtos.size());
     }
 
     @Test
     void testarAtualizarProduto() {
         // Arrange
-        Product produtoAtualizado = new Product(1, "Super Hotdog", 6.00f, "SuperHotDog.jpg");
+        Product produtoAtualizado = new Product(1, "Hotdog2", 6.00f, "C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\GitHub\\TestUnitario\\NLayerLancheTeste\\src\\Produtos\\HotDog.jpg");
 
         // Act
         productApplication.update(1, produtoAtualizado);
         Product produtoRecuperado = productApplication.getById(1);
 
         // Assert
-        assertEquals("Super Hotdog", produtoRecuperado.getDescription());
+        assertEquals("Hotdog2", produtoRecuperado.getDescription());
         assertEquals(6.00f, produtoRecuperado.getPrice());
-        assertEquals("SuperHotDog.jpg", produtoRecuperado.getImage());
+        assertEquals("C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\GitHub\\TestUnitario\\NLayerLancheTeste\\src\\BancoDeImagem\\1.jpg", produtoRecuperado.getImage());
     }
 
     @Test
@@ -120,6 +120,6 @@ public class ProductApplicationTest {
         float total = productApplication.sellProduct(2, 3);
 
         // Assert
-        assertEquals(30.00f, total);  // 10.00 * 3
+        assertEquals(30.00f, total);
     }
 }

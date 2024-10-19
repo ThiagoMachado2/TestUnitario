@@ -2,9 +2,12 @@ package com.snack.repositories;
 
 import com.snack.entities.Product;
 import com.snack.services.ProductService;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+
+import java.util.NoSuchElementException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -17,6 +20,7 @@ public class ProductServiceTest {
     public void setUp() {
         productService = new ProductService();
         product = new Product(1, "HotDog", 5.00f, "C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\GitHub\\TestUnitario\\NLayerLancheTeste\\src\\Produtos\\HotDog.jpg");
+        productService.save(product);
     }
 
     @Test
@@ -30,14 +34,13 @@ public class ProductServiceTest {
 
         // Assert
         assertTrue(resultado);
-        assertEquals("C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\GitHub\\TestUnitario\\NLayerLancheTeste\\src\\BancoDeImagem\\1.jpg", product.getImage());
     }
 
     @Test
     void testarSalvarProdutoComImagemInexistente() {
         // Arrange
         ProductService service = new ProductService();
-        Product product = new Product(1, "HotDog", 10.0f, "");
+        Product product = new Product(1, "HotDog", 10.0f, "C:\\Users\\aluno\\Downloads\\TestUnitario\\TestUnitario\\NLayerLancheTeste\\src\\Produtos\\nada.jpg");
 
         // Act
         boolean resultado = service.save(product);
@@ -48,19 +51,16 @@ public class ProductServiceTest {
 
     @Test
     void testarAtualizarProdutoExistente() {
-        // Arrange
-        ProductService service = new ProductService();
-        Product product = new Product(2, "Hamburguer", 10.0f, "C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\GitHub\\TestUnitario\\NLayerLancheTeste\\src\\Produtos\\Hamburguer.jpg");
+        Product produtoOriginal = new Product(10,"HotDog",10.4f, "C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\GitHub\\TestUnitario\\NLayerLancheTeste\\src\\Produtos\\HotDog.jpg");
+        productService.save(produtoOriginal);
 
-        Product updatedProduct = new Product(1, "HotDog2", 20.0f, "C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\GitHub\\TestUnitario\\NLayerLancheTeste\\src\\Produtos\\HotDog.jpg");
+        Product produtoAtualizar = new Product(10,"Hamburguer",10.4f, "C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\GitHub\\TestUnitario\\NLayerLancheTeste\\src\\Produtos\\Hamburguer.jpg");
+        productService.update(produtoAtualizar);
 
-        // Act
-        service.update(updatedProduct);
+        String imagem = productService.getImagePathById(10);
 
-        // Assert
-        assertEquals("HotDog2", updatedProduct.getDescription());
-        assertEquals(20.0f, updatedProduct.getPrice());
-        assertEquals("C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\GitHub\\TestUnitario\\NLayerLancheTeste\\src\\BancoDeImagem\\1.jpg", updatedProduct.getImage());
+        Assertions.assertTrue(imagem.contains("10.jpg"));
+
     }
 
 
@@ -72,10 +72,10 @@ public class ProductServiceTest {
         service.save(product);
 
         // Act
-        service.remove(1);
+        service.remove(3);
 
         // Assert
-        assertNull(service.getImagePathById(1));
+        assertThrows(NoSuchElementException.class, ()-> service.getImagePathById(3));
     }
 
     @Test

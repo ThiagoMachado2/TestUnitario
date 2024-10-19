@@ -25,11 +25,8 @@ public class ProductService {
     }
 
     public boolean save(Product product) {
-        if (product.getImage() == null || product.getImage().isEmpty()) {
-            return false;
-        }
-
         Path path = Paths.get(product.getImage());
+
         Path destinationPath = Paths.get(String.format("%s%d.%s", filePath, product.getId(), getFileExtension(path)));
 
         if (Files.exists(path)) {
@@ -45,11 +42,10 @@ public class ProductService {
         return false;
     }
 
-
     public String getImagePathById(int id) {
         File directory = new File(filePath);
         File[] matches = directory.listFiles((dir, name) -> name.startsWith(String.valueOf(id)));
-        return Arrays.stream(matches).findFirst().map(File::getAbsolutePath).orElse(null);
+        return Arrays.stream(matches).findFirst().get().getAbsolutePath();
     }
 
     public void update(Product product) {
@@ -58,14 +54,12 @@ public class ProductService {
     }
 
     public void remove(int id) {
-        String imagePath = getImagePathById(id);
-        if (imagePath != null) {
-            Path path = Paths.get(imagePath);
-            try {
-                Files.deleteIfExists(path);
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
+        Path path = Paths.get(getImagePathById(id));
+
+        try {
+            Files.deleteIfExists(path);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

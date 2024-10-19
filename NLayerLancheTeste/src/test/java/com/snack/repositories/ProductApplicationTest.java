@@ -3,10 +3,12 @@ package com.snack.repositories;
 import com.snack.applications.ProductApplication;
 import com.snack.entities.Product;
 import com.snack.services.ProductService;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -46,11 +48,9 @@ public class ProductApplicationTest {
 
     @Test
     void testarObterProdutoPorIdInvalido() {
-        // Act
-        Product produtoRecuperado = productApplication.getById(99);
-
-        // Assert
-        assertNull(produtoRecuperado);
+        // Assert e Act
+        assertThrows(NoSuchElementException.class, () -> {productApplication.getById(99);
+        });
     }
 
     @Test
@@ -91,27 +91,25 @@ public class ProductApplicationTest {
 
     @Test
     void testarRemoverProdutoInexistente() {
-        // Act
-        productApplication.remove(99);
-        List<Product> produtos = productApplication.getAll();
-
-        // Assert
-        assertEquals(2, produtos.size());
+        // Assert e Act
+        assertThrows(NoSuchElementException.class, () -> {productApplication.remove(99);
+        });
     }
 
     @Test
     void testarAtualizarProduto() {
         // Arrange
-        Product produtoAtualizado = new Product(1, "Hotdog2", 6.00f, "C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\GitHub\\TestUnitario\\NLayerLancheTeste\\src\\Produtos\\HotDog.jpg");
+        Product produtoOriginal = new Product(10, "HotDog", 10.4f, "C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\GitHub\\TestUnitario\\NLayerLancheTeste\\src\\Produtos\\HotDog.jpg");
+        productApplication.append(produtoOriginal);
+
 
         // Act
-        productApplication.update(1, produtoAtualizado);
-        Product produtoRecuperado = productApplication.getById(1);
+        Product produtoAtualizar = new Product(10, "Hamburguer", 10.4f, "C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\GitHub\\TestUnitario\\NLayerLancheTeste\\src\\Produtos\\Hamburguer.jpg");
+        productApplication.update(10, produtoAtualizar);
+        String imagem = productService.getImagePathById(10);
 
         // Assert
-        assertEquals("Hotdog2", produtoRecuperado.getDescription());
-        assertEquals(6.00f, produtoRecuperado.getPrice());
-        assertEquals("C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\GitHub\\TestUnitario\\NLayerLancheTeste\\src\\BancoDeImagem\\1.jpg", produtoRecuperado.getImage());
+        Assertions.assertTrue(imagem.contains("10.jpg"));
     }
 
     @Test

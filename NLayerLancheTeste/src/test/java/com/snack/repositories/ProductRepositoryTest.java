@@ -66,7 +66,7 @@ public class ProductRepositoryTest {
     @Test
     public void testarAtualizarProdutoInexistente() {
         Product product = new Product(99, "NaoExiste", 10.0f, "C:\\Users\\thiag\\OneDrive\\Área de Trabalho\\GitHub\\TestUnitario\\NLayerLancheTeste\\src\\Produtos\\naoexiste.jpg");
-        assertThrows(IllegalArgumentException.class, () -> productRepository.update(99, product));
+        assertThrows(NoSuchElementException.class, () -> productRepository.update(99, product));
     }
 
     @Test

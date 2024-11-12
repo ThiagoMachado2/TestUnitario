@@ -4,25 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1e4c673-cd80-4e40-b961-9fa6597c1ad8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/src/BancoDeImagem/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/src/BancoDeImagem/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/src/main/java/com/snack/applications/ProductApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/src/main/java/com/snack/applications/ProductApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/src/main/java/com/snack/facade/ProductFacade.java" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/src/main/java/com/snack/facade/ProductFacade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/src/main/java/com/snack/repositories/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/src/main/java/com/snack/repositories/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/src/main/java/com/snack/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/src/main/java/com/snack/services/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/src/test/java/com/snack/repositories/ProductApplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/src/test/java/com/snack/repositories/ProductApplicationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/src/test/java/com/snack/repositories/ProductRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/src/test/java/com/snack/repositories/ProductRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/src/test/java/com/snack/repositories/ProductServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/src/test/java/com/snack/repositories/ProductServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/target/classes/com/snack/repositories/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/target/classes/com/snack/repositories/ProductRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/target/classes/com/snack/services/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/target/classes/com/snack/services/ProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/target/test-classes/com/snack/repositories/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/target/test-classes/com/snack/repositories/AppTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/target/test-classes/com/snack/repositories/ProductApplicationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/target/test-classes/com/snack/repositories/ProductApplicationTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/target/test-classes/com/snack/repositories/ProductRepositoryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/target/test-classes/com/snack/repositories/ProductRepositoryTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/target/test-classes/com/snack/repositories/ProductServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/NLayerLancheTeste/target/test-classes/com/snack/repositories/ProductServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NLayerLancheTeste/target/test-classes/com/snack/repositories/ProductTest.class" beforeDir="false" />
-    </list>
+    <list default="true" id="d1e4c673-cd80-4e40-b961-9fa6597c1ad8" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
